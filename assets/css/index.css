@@ -3,6 +3,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 100%;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -48,7 +49,7 @@ body {
 }
 .login_container_login,
 .login_container_sign-up,
-.btn {
+.btn, .menu-icon {
   cursor: pointer;
 }
 
@@ -123,7 +124,7 @@ header .nav_bar {
             flex-direction: column;
     background: var(--dark-violet);
     top: 7rem;
-    width: 100%;
+    width: 94%;
     height: 350px;
     border-radius: 7px;
     padding: 2rem;
@@ -249,6 +250,14 @@ header .menu-icon {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .hero_text {
@@ -276,6 +285,9 @@ header .menu-icon {
 @media (max-width: 900px) {
   .hero_text, .hero_img {
     width: 100%;
+  }
+  .hero img {
+    max-width: 100%;
   }
 }
 
@@ -569,11 +581,17 @@ footer .footer_container {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 480px) {
+@media (max-width: 900px) {
   footer .footer_container {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    gap: 2rem;
     place-items: center;
+  }
+}
+@media (max-width: 480px) {
+  footer .footer_container {
+    gap: 1rem;
   }
 }
 footer .footer_container_links {

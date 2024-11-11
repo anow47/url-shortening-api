@@ -22,8 +22,7 @@ header{
         position: relative;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        
+        align-items: center;        
 
         @media (max-width:900px){
             position: absolute;
@@ -31,11 +30,10 @@ header{
             flex-direction: column;
             background: var(--dark-violet);
             top: 7rem;
-            width: 100%;
+            width: 94%;
             height: 350px;
             border-radius: 7px;
             padding: 2rem;
-
         }
         &_box{
             display: flex;
@@ -133,6 +131,12 @@ header{
     @media (max-width:900px){
         flex-direction: column-reverse;
         text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media (max-width: 480px){
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     &_text{
@@ -162,7 +166,10 @@ header{
     @media (max-width:900px){
         &_text,&_img{
             width: 100%;
-        } 
+        }
+        img{
+            max-width: 100%;
+        }
     }
 }
 /// Main section
@@ -405,9 +412,13 @@ footer{
         grid-column-gap: 60px;
         justify-content: space-between;
         
-        @media (max-width: 480px) {
+        @media (max-width: 900px) {
             grid-template-columns: 1fr;
+            gap: 2rem;
             place-items: center;
+        }
+        @media (max-width: 480px) {
+            gap: 1rem;
         }
 
         &_links{
