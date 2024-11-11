@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL at Github](https://github.com/anow47/url-shortening-api)
-- Live Site URL: [live site](https://your-live-site-url.com)
+- Live Site URL: [live site](https://673230ab89a1ed553ec9e186--urls-shortening-api.netlify.app/)
 
 ## My process
 Just getting a working shortening-url API
