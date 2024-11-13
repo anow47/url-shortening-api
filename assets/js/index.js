@@ -30,9 +30,9 @@ function displayShortLink(links) {
 
 async function getApi(url) {
     try {
-        const res = await fetch(`https://api.shrtco.de/v2/shorten?url=${encodeURIComponent(url)}`);
+        const res = await fetch(`https://ulvis.net/api.php?url=${encodeURIComponent(url)}`);
         const data = await res.json();
-        if (data.ok) {
+        if (data.success) {
             const links = {
                 input: url,
                 shortLink: data.result.full_short_link
